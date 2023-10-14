@@ -1,7 +1,7 @@
 import classes from "./UpdateGame.module.css";
 import { useEffect, useState } from "react";
 import Card from "../ui/card/Card";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const UpdateGame = () => {
@@ -14,6 +14,7 @@ const UpdateGame = () => {
   const [publicId, setPublicId] = useState("");
 
   const token = useSelector((state) => state.token.token);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getGameContent();
@@ -96,6 +97,7 @@ const UpdateGame = () => {
       setTitle(" ");
       setConsoles(" ");
       setImage(null);
+      navigate("/")
     } catch (error) {
       console.log(error);
     }
