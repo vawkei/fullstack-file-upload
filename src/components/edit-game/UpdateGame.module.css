@@ -1,0 +1,35 @@
+.upload-container{
+    width: 70%;
+    max-width: 30rem;
+    margin: 6rem 0;
+    color: black;
+    padding: 2rem;
+}
+.upload-container .control{
+    display: block;
+    margin: 1rem 0;
+}
+.upload-container input{
+    display: block;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 6px;
+    font: inherit;
+    color: black;
+}
+.action{
+    text-align: center;
+    padding: 1.5rem;
+}
+.action button{
+    padding: 0.25rem 1.5rem;
+    border-radius: 6px;
+    width: 100%;
+    background-color:green;
+    color: white;
+}
+.action button:hover{
+    background-color:transparent;
+    color: black;
+    cursor: pointer;
+}

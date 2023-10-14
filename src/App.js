@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Auth from './components/auth/Auth';
+import Content from './components/content/Content';
+import FileUpload from './components/file-upload/FileUpload';
+import HomePage from './components/home-page/HomePage';
+import Layout from './components/main-navigation/Layout';
+
+import { Route, Routes } from "react-router-dom";
+import UpdateGame from './components/edit-game/UpdateGame';
 
 function App() {
+
+ const thereisToken =  localStorage.getItem("token");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout >
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          {!thereisToken && <Route path='/auth' element={< Auth/>} />}
+          <Route path='/file-upload' element={<FileUpload />} />
+          <Route path='/content' element={<Content />} />
+          <Route path='/content/:id' element={<UpdateGame />} />
+        </Routes>
+    </Layout>
   );
 }
 

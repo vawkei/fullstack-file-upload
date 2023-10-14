@@ -1,0 +1,40 @@
+.form-container{
+    width: 70%;
+    max-width: 30rem;
+    margin: 6rem 0;
+    /* background-color: yellow; */
+    padding: 1rem;
+    text-align: center;
+}
+.form-container .control{
+    display: block;
+    margin: 1rem 0;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 6px;
+    font: inherit;
+    color: black;
+}
+.action{
+    text-align: center;
+}
+.action button{
+    padding: 0.25rem 1.5rem;
+    border-radius: 6px;
+    background-color: green;
+    color: white;
+}
+.action button:hover{
+    background-color:transparent;
+    color: black;
+    cursor: pointer;
+}
+.form-container p{
+    padding: 1rem;
+}
+.form-container p:hover{
+   cursor: pointer;
+}
